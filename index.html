@@ -27,7 +27,7 @@ a{text-decoration:none;color:inherit}.header{position:sticky;top:0;z-index:50;ba
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:950px){.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.editor-row,.two-col{grid-template-columns:1fr}.title{font-size:19px}}
 </style></head><body>
-<header class="header"><div class="header-inner"><div><div class="brand">Quản lý thiết bị nhà máy GitHub Ready</div><div class="sub">Admin: sửa mọi máy | Department: xem toàn bộ, chỉ sửa máy bộ phận mình | Viewer: chỉ xem</div></div><div class="nav"><a class="btn btn-light" href="index.html">Tổng quan</a><button class="btn btn-light" onclick="refreshData()">Tải lại dữ liệu</button><a class="btn btn-dark" href="login.html" id="loginBtn">Đăng nhập</a><button class="btn btn-red" onclick="logout()" id="logoutBtn">Đăng xuất</button></div></div></header>
+<header class="header"><div class="header-inner"><div><div class="brand">Quản lý thiết bị nhà máy GitHub Ready 13.2</div><div class="sub">Admin: sửa mọi máy | Department: xem toàn bộ, chỉ sửa máy bộ phận mình | Viewer: chỉ xem</div></div><div class="nav"><a class="btn btn-light" href="index.html">Tổng quan</a><button class="btn btn-light" onclick="refreshData()">Tải lại dữ liệu</button><a class="btn btn-dark" href="login.html" id="loginBtn">Đăng nhập</a><button class="btn btn-red" onclick="logout()" id="logoutBtn">Đăng xuất</button></div></div></header>
 <main class="container"><section class="hero"><h1 class="title">Sơ đồ tổng quan nhà máy</h1><p>Quản lý bộ phận, máy, user và theo dõi lịch sử người sửa đổi.</p><div class="notice" id="syncStatus">Đang kiểm tra quyền truy cập...</div></section><section class="stats" id="stats"></section>
 
 <section class="card" id="productionDashboard" style="margin-top:16px">
@@ -52,7 +52,7 @@ a{text-decoration:none;color:inherit}.header{position:sticky;top:0;z-index:50;ba
 
 <section class="grid"><div class="card"><div class="topbar"><div><h2 class="title">Sơ đồ toàn nhà máy</h2><div class="muted">Bấm máy trong danh sách để nạp vào form. Department và viewer vẫn xem được toàn bộ, chỉ admin mới quản trị tổng quan đầy đủ.</div></div><div class="layout-tools"><button class="btn btn-light" id="toggleLayoutSizeBtn" onclick="toggleLayoutFullscreen()">Phóng to sơ đồ</button><button class="btn btn-light" id="toggleEditBtn" onclick="toggleEditMode()">Bật kéo thả</button><button class="btn btn-green" onclick="seedMachines()">Khởi tạo dữ liệu mẫu</button></div></div>
 <div style="margin-top:12px"><input id="searchInput" class="search" placeholder="Tìm theo mã máy, tên máy, bộ phận..."><div class="layout-hint" style="margin-top:8px">Bấm "Phóng to sơ đồ" để xem full màn hình. Bấm lại lần nữa để thu nhỏ.</div></div><div class="toolbar"><button class="filter-chip active" id="allDeptChip" onclick="selectDepartmentFilter('')">Tất cả bộ phận</button><div id="departmentFilterChips"></div></div>
-<div class="layout-wrap" id="layoutWrap"><img class="layout-img" src="/assets/factory-layout.png"><div id="dotsLayer" class="overlay"></div></div>
+<div class="layout-wrap" id="layoutWrap"><img class="layout-img" src="./assets/factory-layout.png"><div id="dotsLayer" class="overlay"></div></div>
 
 <div class="editor-panel"><div><strong>Chỉnh vị trí chấm realtime</strong></div><div class="small">Chỉ admin được kéo thả vị trí chấm. Department và viewer chỉ xem.</div><div class="editor-row"><div><label class="small">Máy đang chọn</label><input id="selectedMachineInfo" class="input" readonly></div><div><label class="small">Tọa độ hiện tại</label><input id="selectedMachineXY" class="input" readonly></div></div><div class="toolbar"><button class="btn btn-light" onclick="copySelectedPosition()">Copy tọa độ máy đang chọn</button><button class="btn btn-light" onclick="exportPositions()">Xuất toàn bộ tọa độ</button></div><textarea id="exportBox" class="codebox"></textarea></div>
 
@@ -81,4 +81,4 @@ a{text-decoration:none;color:inherit}.header{position:sticky;top:0;z-index:50;ba
 
 <div class="card"><h2 class="title">Danh sách máy</h2><div class="muted">Department và viewer vẫn nhìn thấy toàn bộ máy. Chỉ admin và department đúng bộ phận mới có nút sửa.</div><div class="pill" id="rolePill">-</div><div style="margin-top:12px" class="pill" id="machineCountPill">0 máy</div><div class="list" id="machineList"></div></div>
 </section></main>
-<script type="module" src="./assets/app-github-pages-ready-v13.js"></script></body></html>
+<script type="module" src="./assets/app-github-pages-ready-v13-2-path-fix.js"></script></body></html>
