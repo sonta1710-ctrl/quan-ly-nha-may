@@ -1,4 +1,0 @@
-Bản V7.2 đã chỉnh:
-1. Ẩn 2 nút 'Bộ phận' và 'Firebase' ở góc phải header
-2. Khi lưu ghi chú máy, lịch sử sẽ ghi luôn nội dung ghi chú vừa nhập
-   Ví dụ: 'Cập nhật ghi chú: Máy rung mạnh ở đầu ca'

@@ -1,5 +1,0 @@
-Bản V7.4 đã thêm:
-- Nút Phóng to sơ đồ tại khu vực sơ đồ nhà máy
-- Bấm 1 lần: mở sơ đồ full màn hình
-- Bấm lại lần nữa: trở về kích thước cũ
-- Có thể bấm ESC để thoát full màn hình

@@ -1,6 +1,0 @@
-V13.7:
-- Nội dung JS lấy từ V13.6 đã kiểm tra không lỗi cú pháp.
-- Đổi tên JS thành app-v13-7-no-cache-20260425.js.
-- Thêm _headers để Netlify không cache file HTML/JS cũ.
-- Script HTML có query cache-bust ?v=20260425-1.
-Nếu vẫn thấy lỗi app-v13-3-login-rules-fix.js thì chắc chắn bạn đang mở deploy cũ hoặc trình duyệt cache cũ.

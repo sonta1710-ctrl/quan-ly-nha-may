@@ -1,4 +1,0 @@
-Bản V9.2:
-- Hiển thị lỗi đăng nhập chi tiết hơn thay vì chỉ báo 'Đăng nhập thất bại'
-- Nếu thiếu Authorized domain, web sẽ báo rõ
-- Nếu thiếu users/{UID}, web sẽ báo rõ

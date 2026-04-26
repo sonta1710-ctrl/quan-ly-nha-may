@@ -1,6 +1,0 @@
-Bản V13.2:
-- Thêm nút "Xóa sản lượng máy này" trong trang chi tiết máy.
-- Thêm nút "Xóa sản lượng tất cả máy" ngoài trang tổng quan.
-- Sau khi xóa, sản lượng về 0 để nhập dữ liệu ngày hôm nay.
-- Xóa sản lượng vẫn ghi lịch sử từng máy.
-- Nút xóa tất cả chỉ cho admin.

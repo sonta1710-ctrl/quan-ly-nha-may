@@ -1,6 +1,0 @@
-Bản này đã điền sẵn Firebase config.
-
-Bạn chỉ cần:
-1. Upload ZIP này lên Netlify
-2. Mở bằng tab ẩn danh hoặc Ctrl+F5
-3. Người dùng quét QR sẽ vào thẳng đăng nhập, không cần nhập Firebase config

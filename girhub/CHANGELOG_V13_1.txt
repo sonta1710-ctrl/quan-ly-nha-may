@@ -1,7 +1,0 @@
-Bản V13.1 sửa đăng nhập:
-- Không còn đứng im ở "Đang kiểm tra quyền truy cập..." nếu role sai/thiếu.
-- Nếu user có document users/{UID} nhưng role không đúng, web báo rõ UID và role hiện tại.
-- Login không tự chuyển về tổng quan khi role chưa hợp lệ.
-- Tổng quan dùng load dữ liệu một lần + realtime máy thông minh.
-- Rules mới cho phép tạo tài khoản viewer tự tạo document users/{uid}; admin vẫn quản lý role.
-Quan trọng: upload bản này và copy lại FIRESTORE_RULES_OPERATOR.txt vào Firestore Rules rồi Publish.

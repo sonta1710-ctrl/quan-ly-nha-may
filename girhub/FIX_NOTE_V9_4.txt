@@ -1,5 +1,0 @@
-Bản V9.4 sửa lỗi nghiêm trọng:
-- Trong bản V9.x trước có ký tự \n bị chèn thẳng vào code JavaScript làm toàn bộ JS không chạy.
-- Vì JS không chạy nên nút Đăng nhập/Tạo tài khoản không phản ứng và dữ liệu phòng ban/máy không hiển thị.
-- Dữ liệu Firebase không bị mất; chỉ là web không tải được dữ liệu.
-- Đã đổi tên file JS sang app-v9-4.js để tránh cache.

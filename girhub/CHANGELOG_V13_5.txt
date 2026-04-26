@@ -1,4 +1,0 @@
-V13.5:
-- Sửa lỗi JavaScript tại dòng 117: thừa đoạn `}:null;}` gây SyntaxError trong Chrome.
-- Đổi file JS sang app-v13-5-syntax-fix.js để tránh cache.
-- Giữ nguyên chức năng V13.3: login debug, realtime thông minh, sản lượng theo mã, xóa sản lượng.

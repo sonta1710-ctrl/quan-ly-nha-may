@@ -1,6 +1,0 @@
-V13.3:
-- Sửa Rules an toàn hơn: user được đọc chính document users/{UID} trước, admin mới được list users.
-- Thêm thông báo debug rõ từng bước: khởi động Firebase, kiểm tra Auth, đọc quyền, thiếu role, bị Rules chặn.
-- Nếu đứng ở tổng quan sẽ hiện lỗi cụ thể thay vì chỉ 'Đang kiểm tra quyền truy cập...'.
-- Vẫn giữ realtime thông minh, sản lượng theo nhiều mã, xóa sản lượng máy/tất cả máy.
-Bắt buộc: copy FIRESTORE_RULES_OPERATOR.txt vào Firebase Firestore Rules và Publish.

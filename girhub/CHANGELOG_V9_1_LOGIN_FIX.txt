@@ -1,6 +1,0 @@
-Bản V9.1 sửa lỗi đăng nhập:
-- Web đọc quyền user bằng đúng document users/{uid} thay vì query toàn bộ users
-- User thường được đọc quyền của chính mình theo Rules mới
-- Chỉ admin mới query toàn bộ danh sách users
-- Nếu tài khoản chưa có document users/{uid}, web sẽ báo rõ lỗi
-Quan trọng: cần copy lại FIRESTORE_RULES_OPERATOR.txt mới vào Firebase Rules và Publish.

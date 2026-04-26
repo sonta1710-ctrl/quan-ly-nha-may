@@ -1,4 +1,0 @@
-V13.6:
-- Sửa lỗi V13.5 bị thiếu dấu } trong hàm loadCurrentProfile, khiến các hàm quyền không chạy đúng.
-- Bổ sung boot status rõ ràng hơn.
-- Đổi tên JS sang app-v13-6-login-function-fix.js để tránh cache.

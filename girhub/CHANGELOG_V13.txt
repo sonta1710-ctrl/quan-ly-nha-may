@@ -1,1 +1,0 @@
-Bản V13: realtime thông minh; nhập sản lượng theo nhiều mã sản phẩm; tự tổng hợp số mã, tổng mong muốn, tổng thực tế, tiến độ; xuất CSV theo từng mã; trạng thái báo lỗi/bảo trì màu đỏ và chuẩn bị có lịch sản xuất màu vàng.
