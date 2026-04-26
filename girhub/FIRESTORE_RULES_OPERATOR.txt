@@ -1,0 +1,97 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function hasUserDoc() {
+      return signedIn() &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid));
+    }
+
+    function userDoc() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function isAdmin() {
+      return hasUserDoc() && userDoc().role == "admin";
+    }
+
+    function isViewer() {
+      return hasUserDoc() && userDoc().role == "viewer";
+    }
+
+    function isOperator() {
+      return hasUserDoc() && userDoc().role == "operator";
+    }
+
+    function isDepartment() {
+      return hasUserDoc() && userDoc().role == "department";
+    }
+
+    function sameDepartment(deptId) {
+      return hasUserDoc() && userDoc().departmentId == deptId;
+    }
+
+    function operatorAllowedMachineUpdate() {
+      return request.resource.data.diff(resource.data).affectedKeys()
+        .hasOnly([
+          "status",
+          "updatedAt",
+          "updatedByEmail",
+          "updatedByName",
+
+          "productionItems",
+          "targetQty",
+          "actualQty",
+          "okQty",
+          "ngQty",
+          "performance",
+          "productionCodeCount",
+          "productionShift",
+          "productionNote",
+          "productionUpdatedAt",
+          "productionUpdatedByEmail",
+          "productionUpdatedByName"
+        ]);
+    }
+
+    match /users/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow list: if isAdmin();
+
+      allow create: if signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.role == "viewer";
+
+      allow update, delete: if isAdmin();
+    }
+
+    match /departments/{departmentId} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+    }
+
+    match /machines/{machineId} {
+      allow read: if isAdmin() || isViewer() || isDepartment() || isOperator();
+      allow create, delete: if isAdmin();
+
+      allow update: if isAdmin()
+        || (isDepartment() && sameDepartment(resource.data.departmentId))
+        || (isOperator() && operatorAllowedMachineUpdate());
+    }
+
+    match /machines/{machineId}/history/{historyId} {
+      allow read: if isAdmin() || isViewer() || isDepartment() || isOperator();
+      allow create: if isAdmin() || isOperator() ||
+        (isDepartment() && sameDepartment(get(/databases/$(database)/documents/machines/$(machineId)).data.departmentId));
+    }
+
+    match /machines/{machineId}/productionLogs/{logId} {
+      allow read: if isAdmin() || isViewer() || isDepartment() || isOperator();
+      allow create: if isAdmin() || isOperator() ||
+        (isDepartment() && sameDepartment(get(/databases/$(database)/documents/machines/$(machineId)).data.departmentId));
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "index.html": true,
+  "login.html": true,
+  "machine.html": true,
+  "department.html": true,
+  "scan.html": true,
+  "assets_js": true,
+  ".nojekyll": true,
+  "404.html": true
+}

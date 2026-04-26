@@ -1,0 +1,7 @@
+Nếu bấm Đăng nhập không có phản ứng:
+1. Mở Chrome bằng tab ẩn danh.
+2. Bấm Ctrl+F5.
+3. Kiểm tra Netlify đã deploy đúng bản V9.3 chưa.
+4. Vào Firebase Authentication > Settings > Authorized domains, thêm domain Netlify hiện tại.
+5. Đảm bảo Authentication > Sign-in method > Email/Password đã Enable.
+6. Đảm bảo Firestore users/{UID} tồn tại với role: admin / operator / department / viewer.

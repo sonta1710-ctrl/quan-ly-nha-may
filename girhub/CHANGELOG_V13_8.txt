@@ -1,0 +1,7 @@
+V13.8 Final Clean:
+- Sửa lỗi: Identifier 'calcProduction' has already been declared.
+- Loại bỏ các function sản lượng bị khai báo trùng trong file JS.
+- Giữ bản sản lượng theo nhiều mã sản phẩm.
+- Đổi tên JS sang app-v13-8-final-clean.js và thêm cache bust.
+- Thêm _headers để Netlify không cache file lỗi cũ.
+- Đã chạy kiểm tra cú pháp node --check: PASS.

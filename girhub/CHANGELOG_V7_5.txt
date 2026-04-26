@@ -1,0 +1,4 @@
+Bản V7.5 đã sửa lỗi lệch chấm khi phóng to sơ đồ:
+- overlay chấm sẽ tự đồng bộ theo đúng kích thước ảnh layout đang hiển thị
+- khi bấm phóng to / thu nhỏ / resize màn hình / ESC đều tự căn lại
+- chấm sẽ bám đúng vị trí máy hơn khi full màn hình

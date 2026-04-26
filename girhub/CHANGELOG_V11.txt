@@ -1,0 +1,1 @@
+Bản V11: gộp Bảo trì vào Báo lỗi/bảo trì; màu vàng là Chuẩn bị có lịch sản xuất; thêm 2 ô sản lượng mong muốn/thực tế; thanh tiến độ; bảng sản lượng và xuất CSV mở bằng Excel.

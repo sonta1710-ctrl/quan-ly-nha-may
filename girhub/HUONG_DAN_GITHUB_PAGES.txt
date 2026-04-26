@@ -1,0 +1,24 @@
+HƯỚNG DẪN UP LÊN GITHUB PAGES
+
+1) Giải nén ZIP này.
+2) Vào GitHub.com > tạo repository mới, ví dụ: quan-ly-nha-may
+3) Trong repository, bấm Add file > Upload files.
+4) Kéo TOÀN BỘ file sau khi giải nén lên GitHub.
+5) Bấm Commit changes.
+6) Vào Settings > Pages.
+7) Source: Deploy from branch.
+8) Branch: main / root.
+9) Bấm Save.
+
+Link web sẽ có dạng:
+https://ten-tai-khoan.github.io/ten-repository/
+
+QUAN TRỌNG:
+Firebase > Authentication > Settings > Authorized domains
+Thêm domain:
+ten-tai-khoan.github.io
+
+Không thêm https:// và không thêm /ten-repository.
+
+Nếu chưa cập nhật rules:
+Mở FIRESTORE_RULES_OPERATOR.txt > copy toàn bộ > Firebase > Firestore > Rules > Publish.
